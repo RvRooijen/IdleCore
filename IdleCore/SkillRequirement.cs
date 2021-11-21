@@ -2,15 +2,20 @@
 
 namespace IdleCore
 {
-    public class SkillRequirement
+    public class SkillRequirement : IRequirement
     {
         private Type _type;
         private int _value;
 
-        public Requirement(Type type, int value)
+        public SkillRequirement(Type type, int value)
         {
             _type = type;
             _value = value;
+        }
+        
+        public bool HasRequirements(Player player)
+        {
+            return true;
         }
     }
 }

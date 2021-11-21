@@ -2,7 +2,7 @@
 
 namespace IdleCore
 {
-    public class Task
+    public class IdleTask
     {
         private float _remainingTime;
         public float RemainingTime => _remainingTime;
@@ -10,7 +10,7 @@ namespace IdleCore
         public EventHandler? OnCompletion;
         private EventArgs _args;
 
-        public Task(float totalTime, EventHandler onCompletion, EventArgs args)
+        public IdleTask(float totalTime, EventHandler onCompletion, EventArgs args)
         {
             _args = args;
             _remainingTime = totalTime;

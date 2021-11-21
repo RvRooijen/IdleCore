@@ -1,7 +1,9 @@
-﻿namespace IdleCore
+﻿using System;
+
+namespace IdleCore
 {
     public interface IDroppable
     {
-        public IDroppable GetDrop();
+        public IDroppable Roll(Random random);
     }
 }
